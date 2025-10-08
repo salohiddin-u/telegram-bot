@@ -11,8 +11,8 @@ import uvicorn
 from aiogram.filters import Command, CommandObject
 
 
-BOT_TOKEN = "7979914433:AAFRxIJpK0JSr82489Id6MWUHcaqsnghFyI"
-WEBHOOK_URL = "https://nononerous-philomena-cluelessly.ngrok-free.dev/webhook"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+WEBHOOK_URL = os.getenv("WEBHOOK_URL")
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
