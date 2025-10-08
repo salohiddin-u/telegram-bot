@@ -7,14 +7,12 @@ from aiogram.enums import ChatMemberStatus
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from fastapi import FastAPI, Request
 from aiogram import Bot, Dispatcher, types, F
-from dotenv import load_dotenv
 import uvicorn
 from aiogram.filters import Command, CommandObject
 
-load_dotenv()
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-WEBHOOK_URL = os.getenv("WEBHOOK_URL")
+BOT_TOKEN = "7979914433:AAFRxIJpK0JSr82489Id6MWUHcaqsnghFyI"
+WEBHOOK_URL = "https://nononerous-philomena-cluelessly.ngrok-free.dev/webhook"
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
