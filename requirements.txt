@@ -1,3 +1,4 @@
-aiogram
-uvicorn
-fastapi
+aiogram==3.*
+fastapi==0.115.*
+uvicorn==0.30.*
+gunicorn
