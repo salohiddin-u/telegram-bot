@@ -234,7 +234,7 @@ async def on_shutdown():
 async def process_webhook(request: Request):
     data = await request.json()
     update = types.Update(**data)
-    await dp.feed_update(bot, update)
+    await dp.process_update(update)  # fix here
     return {"ok": True}
 
 
@@ -244,4 +244,6 @@ async def home():
 
 
 if __name__ == "__main__":
-    uvicorn.run("bot:app", host="0.0.0.0", port=5500)
+    import os
+    port = int(os.environ.get("PORT", 5500))  # use Render's PORT
+    uvicorn.run("bot:app", host="0.0.0.0", port=port)
